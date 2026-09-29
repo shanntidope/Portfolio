@@ -3,47 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shann Cawicaan — IT Student</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Shann Cawicaan — Portfolio & Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#080800;
-  --bg2:#0d0d00;
-  --bg3:#111100;
-  --yellow:#f0d000;
-  --yellow-dim:#1a1a00;
-  --yellow-mid:#2a2a00;
-  --yellow-bright:#f5e040;
-  --text:#f5f0e0;
-  --muted:#a0a080;
-  --muted2:#c8b800;
-  --border:#222200;
-  --border2:#383800;
+  --bg: #090d0b;            /* Obsidian Green/Black */
+  --bg2: #111a14;           /* Dark Forest Slate */
+  --bg3: #1b2820;           /* Card Elevated/Hover */
+  --yellow: #10b981;        /* Vivid Emerald Accent */
+  --yellow-dim: rgba(16, 185, 129, 0.12);
+  --yellow-mid: #34d399;    /* Bright Mint Midtone */
+  --yellow-bright: #6ee7b7; /* Neon Mint Highlight */
+  --text: #f0fdf4;          /* Pure White-Green Text */
+  --muted: #86efac;        /* Soft Sage Muted Text */
+  --muted2: #34d399;       /* Secondary Accent */
+  --border: #1a2e22;       /* Subtle Green Line Border */
+  --border2: #274734;      /* Stronger Card Border */
   --ff:'Inter',sans-serif;
   --fm:'JetBrains Mono',monospace;
   --fb:'Bebas Neue',sans-serif;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--ff);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
- 
+
 /* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:99;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 6vw;height:58px;
-  background:rgba(8,8,0,0.95);
-  backdrop-filter:blur(10px);
+  background:rgba(9, 13, 11, 0.85);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
 }
-.logo{font-family:var(--fm);font-size:14px;color:var(--yellow);text-decoration:none;letter-spacing:0.1em}
-.nav-links{display:flex;gap:28px;list-style:none}
+.logo{font-family:var(--fm);font-size:14px;color:var(--yellow);text-decoration:none;letter-spacing:0.1em;font-weight:700}
+.nav-links{display:flex;gap:24px;list-style:none}
 .nav-links a{font-family:var(--fm);font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--yellow)}
 .nav-right{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:0.08em}
-.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
- 
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);box-shadow:0 0 8px var(--yellow);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
 /* HERO */
 #hero{
   min-height:100vh;
@@ -57,251 +57,238 @@ nav{
 .hero-year{font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:0.1em}
 .hero-divider{width:100%;height:1px;background:var(--border);margin-bottom:20px}
 .hero-main{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center;padding:20px 0}
-.hero-name{font-family:var(--fb);font-size:clamp(72px,11vw,140px);color:var(--yellow);line-height:0.9;letter-spacing:2px;margin-bottom:10px}
-.hero-surname{font-family:var(--fb);font-size:clamp(72px,11vw,140px);color:var(--text);line-height:0.9;letter-spacing:2px;opacity:0.15}
+.hero-name{font-family:var(--fb);font-size:clamp(72px,11vw,140px);color:var(--yellow);line-height:0.9;letter-spacing:2px;margin-bottom:10px;text-shadow:0 0 30px rgba(16,185,129,0.25)}
+.hero-surname{font-family:var(--fb);font-size:clamp(72px,11vw,140px);color:var(--text);line-height:0.9;letter-spacing:2px;opacity:0.2}
 .hero-role{font-family:var(--fm);font-size:12px;color:var(--muted2);letter-spacing:0.08em;margin-bottom:20px}
-.hero-bio{font-size:14px;color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:36px;font-weight:300}
-.hero-bio strong{color:var(--text);font-weight:500}
+.hero-bio{font-size:14px;color:var(--muted);line-height:1.8;max-width:520px;margin-bottom:36px;font-weight:400}
+.hero-bio strong{color:var(--text);font-weight:600}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn-main{padding:11px 26px;background:var(--yellow);color:#080800;font-family:var(--fm);font-size:11px;font-weight:700;border:none;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:all .2s;cursor:pointer}
-.btn-main:hover{background:var(--yellow-bright);transform:translateY(-2px)}
-.btn-outline{padding:11px 26px;background:transparent;color:var(--yellow);font-family:var(--fm);font-size:11px;border:1px solid var(--border2);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:all .2s}
-.btn-outline:hover{border-color:var(--yellow);background:var(--yellow-dim)}
+.btn-main{padding:11px 26px;background:var(--yellow);color:#090d0b;font-family:var(--fm);font-size:11px;font-weight:700;border:none;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:all .2s;cursor:pointer;box-shadow:0 0 15px rgba(16,185,129,0.3)}
+.btn-main:hover{background:var(--yellow-bright);transform:translateY(-2px);box-shadow:0 0 25px rgba(16,185,129,0.5)}
+.btn-outline{padding:11px 26px;background:transparent;color:var(--yellow);font-family:var(--fm);font-size:11px;border:1px solid var(--yellow);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:all .2s}
+.btn-outline:hover{background:var(--yellow-dim);box-shadow:0 0 15px rgba(16,185,129,0.2)}
 .hero-divider-bottom{width:100%;height:1px;background:var(--border);margin-top:20px}
-.hero-stats{display:flex;gap:40px;padding-top:20px}
+.hero-stats{display:flex;gap:40px;padding-top:20px;flex-wrap:wrap}
 .stat{display:flex;flex-direction:column;gap:2px}
 .stat strong{font-family:var(--fb);font-size:32px;color:var(--yellow);letter-spacing:1px}
 .stat span{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase}
- 
-/* photo */
-.hero-photo-wrap{position:relative;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--border2);background:var(--bg2)}
+
+/* PHOTO */
+.hero-photo-wrap{position:relative;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--border2);background:var(--bg2);box-shadow:0 10px 30px rgba(0,0,0,0.5)}
 .hero-photo-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,var(--bg2),transparent);z-index:1;pointer-events:none}
-.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(30%) sepia(20%) brightness(0.85)}
-.hero-photo-wrap:hover .hero-photo{filter:grayscale(0%) sepia(0%) brightness(1);transition:filter .4s}
-.photo-tag{position:absolute;bottom:12px;left:12px;right:12px;z-index:2;background:rgba(8,8,0,0.9);border:1px solid var(--border2);padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(20%) brightness(0.9)}
+.hero-photo-wrap:hover .hero-photo{filter:grayscale(0%) brightness(1);transition:filter .4s}
+.photo-tag{position:absolute;bottom:12px;left:12px;right:12px;z-index:2;background:rgba(17, 26, 20, 0.9);border:1px solid var(--border2);backdrop-filter:blur(6px);padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
 .photo-tag-name{font-family:var(--fm);font-size:10px;color:var(--text)}
-.photo-tag-status{font-family:var(--fm);font-size:9px;color:var(--yellow);letter-spacing:0.08em}
- 
+.photo-tag-status{font-family:var(--fm);font-size:9px;color:var(--yellow);letter-spacing:0.08em;font-weight:600}
+
 /* SECTION */
 .section{padding:72px 6vw;border-bottom:1px solid var(--border)}
 .sec-top{display:flex;align-items:center;gap:16px;margin-bottom:48px}
-.sec-num{font-family:var(--fm);font-size:10px;color:var(--yellow);letter-spacing:0.12em}
+.sec-num{font-family:var(--fm);font-size:10px;color:var(--yellow);letter-spacing:0.12em;font-weight:600}
 .sec-title{font-family:var(--fb);font-size:32px;color:var(--text);letter-spacing:2px}
 .sec-line{flex:1;height:1px;background:var(--border)}
- 
+
 /* SKILLS */
 .skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
-.skill-row{background:var(--bg);display:grid;grid-template-columns:140px 1fr auto;gap:20px;align-items:center;padding:18px 22px;transition:background .2s}
-.skill-row:hover{background:var(--bg2)}
+.skill-row{background:var(--bg2);display:grid;grid-template-columns:140px 1fr auto;gap:20px;align-items:center;padding:18px 22px;transition:all .2s}
+.skill-row:hover{background:var(--bg3);border-color:var(--border2)}
 .sk-name{font-size:15px;font-weight:600;color:var(--text)}
 .sk-bar-wrap{display:flex;flex-direction:column;gap:6px}
 .sk-desc{font-size:11px;color:var(--muted);line-height:1.5}
-.sk-bar{height:1px;background:var(--border2);position:relative}
-.sk-fill{position:absolute;top:0;left:0;height:100%;background:var(--yellow)}
-.sk-badge{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;white-space:nowrap}
-.badge-basic{color:var(--yellow);background:var(--yellow-dim);border:1px solid var(--border2)}
-.badge-learning{color:#f0a000;background:#1a0f00;border:1px solid #2a1a00}
- 
+.sk-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.sk-pill{font-family:var(--fm);font-size:9px;color:var(--yellow-bright);background:var(--yellow-dim);border:1px solid rgba(16,185,129,0.3);padding:2px 6px;font-weight:500}
+.sk-bar{height:2px;background:var(--bg3);position:relative}
+.sk-fill{position:absolute;top:0;left:0;height:100%;background:var(--yellow);box-shadow:0 0 8px var(--yellow)}
+.sk-badge{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;white-space:nowrap;font-weight:600}
+.badge-basic{color:var(--muted);background:var(--bg3);border:1px solid var(--border2)}
+.badge-active{color:var(--yellow-bright);background:var(--yellow-dim);border:1px solid rgba(16,185,129,0.4)}
+
 /* PROJECTS */
 .proj-wrap{display:flex;flex-direction:column;gap:1px;background:var(--border)}
-.proj-card{background:var(--bg);padding:28px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start;transition:background .2s}
-.proj-card:hover{background:var(--bg2)}
+.proj-card{background:var(--bg2);padding:28px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start;transition:background .2s}
+.proj-card:hover{background:var(--bg3)}
 .proj-num{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px}
 .proj-title{font-family:var(--fb);font-size:28px;color:var(--yellow);letter-spacing:1px;margin-bottom:8px}
-.proj-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:580px;margin-bottom:14px;font-weight:300}
+.proj-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:580px;margin-bottom:14px;font-weight:400}
 .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.proj-tag{font-family:var(--fm);font-size:9px;color:var(--muted2);border:1px solid var(--border2);padding:3px 10px;letter-spacing:0.06em}
+.proj-tag{font-family:var(--fm);font-size:9px;color:var(--muted2);border:1px solid var(--border2);padding:3px 10px;letter-spacing:0.06em;background:var(--bg)}
 .proj-links{display:flex;gap:16px}
-.proj-link{font-family:var(--fm);font-size:10px;color:var(--yellow);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:opacity .2s}
-.proj-link:hover{opacity:0.7}
-.status-wip{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;background:#1a0f00;color:#f0a000;border:1px solid #2a1a00;white-space:nowrap;align-self:flex-start}
-.status-live{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;background:#001a08;color:#4aaa7a;border:1px solid #002a10;white-space:nowrap;align-self:flex-start}
- 
-/* EDUCATION */
-.edu-wrap{display:flex;flex-direction:column;gap:1px;background:var(--border)}
-.edu-card{background:var(--bg);padding:24px;display:grid;grid-template-columns:120px 1fr;gap:24px;transition:background .2s}
-.edu-card:hover{background:var(--bg2)}
-.edu-year{font-family:var(--fm);font-size:10px;color:var(--yellow);letter-spacing:0.06em;line-height:1.7;padding-top:2px}
-.edu-degree{font-size:16px;font-weight:600;color:var(--text);margin-bottom:4px;letter-spacing:-0.3px}
-.edu-school{font-family:var(--fm);font-size:10px;color:var(--muted2);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase}
-.edu-note{font-size:12px;color:var(--muted);line-height:1.65;font-weight:300}
- 
+.proj-link{font-family:var(--fm);font-size:10px;color:var(--yellow);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:opacity .2s;font-weight:600}
+.proj-link:hover{opacity:0.8;text-decoration:underline}
+.status-wip{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;background:rgba(245, 158, 11, 0.15);color:#fbbf24;border:1px solid rgba(245, 158, 11, 0.3);white-space:nowrap;align-self:flex-start;font-weight:600}
+.status-live{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;background:rgba(16, 185, 129, 0.15);color:#34d399;border:1px solid rgba(16, 185, 129, 0.3);white-space:nowrap;align-self:flex-start;font-weight:600}
+
+/* AFFILIATIONS & EDUCATION GRID */
+.grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.grid-card{background:var(--bg2);padding:22px;transition:background .2s;display:flex;flex-direction:column;gap:6px}
+.grid-card:hover{background:var(--bg3)}
+.card-date{font-family:var(--fm);font-size:10px;color:var(--yellow);letter-spacing:0.06em;font-weight:600}
+.card-title{font-size:15px;font-weight:600;color:var(--text)}
+.card-sub{font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase}
+.card-desc{font-size:12px;color:var(--muted);line-height:1.6;font-weight:400;margin-top:4px}
+
+/* WORKSHOP BANNER */
+.workshop-card{background:var(--bg2);border:1px solid var(--border2);padding:24px;margin-top:24px;display:grid;grid-template-columns:140px 1fr;gap:20px;align-items:center}
+.workshop-tag{font-family:var(--fm);font-size:9px;color:var(--yellow);letter-spacing:0.12em;text-transform:uppercase;background:var(--yellow-dim);padding:6px 12px;border:1px solid rgba(16,185,129,0.3);text-align:center;font-weight:600}
+
 /* CONTACT */
 #contact{padding:72px 6vw 100px;border-bottom:none}
-.contact-headline{font-family:var(--fb);font-size:clamp(48px,8vw,100px);color:var(--yellow);line-height:0.9;letter-spacing:2px;margin-bottom:8px}
-.contact-sub-head{font-family:var(--fb);font-size:clamp(48px,8vw,100px);color:var(--text);line-height:0.9;letter-spacing:2px;opacity:0.1;margin-bottom:40px}
+.contact-headline{font-family:var(--fb);font-size:clamp(48px,8vw,100px);color:var(--yellow);line-height:0.9;letter-spacing:2px;margin-bottom:8px;text-shadow:0 0 30px rgba(16,185,129,0.2)}
+.contact-sub-head{font-family:var(--fb);font-size:clamp(48px,8vw,100px);color:var(--text);line-height:0.9;letter-spacing:2px;opacity:0.15;margin-bottom:40px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:40px;max-width:700px}
-.contact-item{background:var(--bg);padding:20px 22px;text-decoration:none;transition:background .2s;display:flex;flex-direction:column;gap:4px}
-.contact-item:hover{background:var(--bg2)}
+.contact-item{background:var(--bg2);padding:20px 22px;text-decoration:none;transition:background .2s;display:flex;flex-direction:column;gap:4px}
+.contact-item:hover{background:var(--bg3)}
 .contact-type{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase}
 .contact-val{font-size:14px;font-weight:500;color:var(--text)}
 .contact-note{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:0.06em}
- 
+
 /* FORM */
 .form-wrap{display:flex;flex-direction:column;gap:1px;background:var(--border);max-width:700px}
-.form-notice{background:var(--yellow-dim);padding:13px 18px;font-family:var(--fm);font-size:10px;color:var(--muted2);letter-spacing:0.06em;border-bottom:1px solid var(--border2)}
-.form-inner{background:var(--bg);padding:24px}
+.form-notice{background:var(--yellow-dim);padding:13px 18px;font-family:var(--fm);font-size:10px;color:var(--yellow-bright);letter-spacing:0.06em;border-bottom:1px solid var(--border2);font-weight:600}
+.form-inner{background:var(--bg2);padding:24px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:16px}
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
 .form-group label{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase}
-.form-group input,.form-group textarea{font-family:var(--ff);font-size:13px;color:var(--text);background:var(--bg2);border:none;border-bottom:1px solid var(--border2);padding:10px 0;outline:none;transition:border-color .2s;width:100%;resize:none}
+.form-group input,.form-group textarea{font-family:var(--ff);font-size:13px;color:var(--text);background:var(--bg);border:none;border-bottom:1px solid var(--border2);padding:10px;outline:none;transition:border-color .2s;width:100%;resize:none}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--yellow)}
 .form-group textarea{min-height:100px}
-.email-hint{font-family:var(--fm);font-size:9px;color:#f0a000;margin-top:3px;letter-spacing:0.06em}
+.email-hint{font-family:var(--fm);font-size:9px;color:var(--yellow);margin-top:3px;letter-spacing:0.06em}
 #form-status{font-family:var(--fm);font-size:11px;margin-top:10px;letter-spacing:0.06em}
-#form-status.success{color:#4aaa7a}
+#form-status.success{color:#34d399}
 #form-status.error{color:#f87171}
- 
+
 /* FOOTER */
 footer{padding:20px 6vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border)}
 footer p{font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
-footer span{font-family:var(--fm);font-size:10px;color:var(--border2);letter-spacing:0.08em}
- 
-/* FADE */
+footer span{font-family:var(--fm);font-size:10px;color:var(--muted2);letter-spacing:0.08em;font-weight:600}
+
+/* FADE ANIMATION */
 .fade{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .fade.in{opacity:1;transform:none}
- 
+
 @media(max-width:900px){
   .hero-main{grid-template-columns:1fr}
   .hero-photo-wrap{max-width:260px}
   .contact-grid{grid-template-columns:1fr}
-  .skills-wrap{grid-template-columns:1fr}
+  .skills-wrap,.grid-2col{grid-template-columns:1fr}
+  .workshop-card{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   .nav-links{display:none}
   .hero-name,.hero-surname{font-size:clamp(56px,14vw,100px)}
   .proj-card{grid-template-columns:1fr}
-  .edu-card{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .hero-stats{gap:24px}
-  .contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
- 
+
 <nav>
   <a href="#hero" class="logo">SHANN.PORTFOLIO</a>
   <ul class="nav-links">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#affiliations">Affiliations</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-right"><div class="nav-dot"></div>OPEN TO WORK</div>
+  <div class="nav-right"><div class="nav-dot"></div>BSIT STUDENT · STI COLLEGE TANAY</div>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-top">
-    <div class="hero-eyebrow">BSIT · 3rd Year · IT Student</div>
-    <div class="hero-year">2025</div>
+    <div class="hero-eyebrow">BSIT Student · STI College Tanay</div>
+    <div class="hero-year">2023 — 2027</div>
   </div>
   <div class="hero-divider"></div>
   <div class="hero-main">
     <div>
       <div class="hero-name">SHANN</div>
       <div class="hero-surname">CAWICAAN</div>
-      <p class="hero-role">// IT Student & Learning Developer</p>
+      <p class="hero-role">// IT Student & Technical Media Specialist</p>
       <p class="hero-bio">
-        A <strong>3rd-year BSIT student</strong> with a genuine curiosity for technology.
-        Currently building <strong>Engkwento</strong> — a Filipino folklore-inspired game using Unity and C# for my capstone.
-        Still learning, always building.
+        A <strong>BSIT student at STI College Tanay</strong> with a background in technical broadcasting, digital media production, and web design. Experienced in creative media layout, video editing, and fundamental programming.
       </p>
       <div class="hero-actions">
-        <a href="#projects" class="btn-main">See My Work</a>
-        <a href="#contact" class="btn-outline">Get In Touch</a>
+        <a href="#projects" class="btn-main">View Projects</a>
+        <a href="#affiliations" class="btn-outline">Affiliations</a>
       </div>
     </div>
     <div class="hero-photo-wrap">
       <img src="1x1_PF.png" alt="Shann Cawicaan" class="hero-photo">
       <div class="photo-tag">
         <span class="photo-tag-name">Shann Cawicaan</span>
-        <span class="photo-tag-status"></span>
+        <span class="photo-tag-status">STI Tanay (2023–2027)</span>
       </div>
     </div>
   </div>
   <div class="hero-divider-bottom"></div>
   <div class="hero-stats">
-    <div class="stat"><strong>5+</strong><span>Languages</span></div>
-    <div class="stat"><strong>2</strong><span>Projects</span></div>
-    <div class="stat"><strong>3RD</strong><span>Year</span></div>
-    <div class="stat"><strong>STEM</strong><span>Background</span></div>
+    <div class="stat"><strong>2027</strong><span>Graduation Target</span></div>
+    <div class="stat"><strong>8+</strong><span>Organizations</span></div>
+    <div class="stat"><strong>2017</strong><span>Media Creation Since</span></div>
   </div>
 </section>
- 
+
 <!-- SKILLS -->
 <section id="skills" class="section">
   <div class="sec-top">
     <span class="sec-num">01</span>
-    <span class="sec-title">SKILLS</span>
+    <span class="sec-title">SKILLS & CREATIVE INVENTORY</span>
     <div class="sec-line"></div>
   </div>
   <div class="skills-wrap">
     <div class="skill-row fade">
-      <span class="sk-name">HTML</span>
+      <span class="sk-name">Video & Design</span>
       <div class="sk-bar-wrap">
-        <p class="sk-desc">Build and structure web pages with semantic markup and basic layouts.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:50%"></div></div>
+        <p class="sk-desc">Basic video editing, graphic design, and promotional media creation since 2017.</p>
+        <div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div>
       </div>
-      <span class="sk-badge badge-basic">Basic</span>
+      <span class="sk-badge badge-active">Active Practice</span>
     </div>
     <div class="skill-row fade">
-      <span class="sk-name">CSS</span>
+      <span class="sk-name">Content Creation</span>
       <div class="sk-bar-wrap">
-        <p class="sk-desc">Style pages with colors, fonts, and basic responsive layouts.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:45%"></div></div>
+        <p class="sk-desc">Digital content planning, social media management, and branding since 2019.</p>
+        <div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div>
       </div>
-      <span class="sk-badge badge-basic">Basic</span>
+      <span class="sk-badge badge-active">Active Practice</span>
     </div>
     <div class="skill-row fade">
-      <span class="sk-name">Python</span>
+      <span class="sk-name">Photography</span>
       <div class="sk-bar-wrap">
-        <p class="sk-desc">Scripting and introductory programming exercises during coursework.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:40%"></div></div>
+        <p class="sk-desc">Event photography, media documentation, and visual framing since 2022.</p>
+        <div class="sk-bar"><div class="sk-fill" style="width:70%"></div></div>
       </div>
-      <span class="sk-badge badge-basic">Basic</span>
+      <span class="sk-badge badge-active">Active Practice</span>
     </div>
     <div class="skill-row fade">
-      <span class="sk-name">C#</span>
+      <span class="sk-name">Programming & Web</span>
       <div class="sk-bar-wrap">
-        <p class="sk-desc">Currently using with Unity to build Engkwento, my capstone game project.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:35%"></div></div>
+        <p class="sk-desc">Fundamental programming logic and basic implementation syntax across multiple languages.</p>
+        <div class="sk-pills">
+          <span class="sk-pill">C#</span>
+          <span class="sk-pill">Python</span>
+          <span class="sk-pill">Java</span>
+          <span class="sk-pill">HTML</span>
+          <span class="sk-pill">CSS</span>
+          <span class="sk-pill">JavaScript</span>
+        </div>
+        <div class="sk-bar" style="margin-top:6px"><div class="sk-fill" style="width:40%"></div></div>
       </div>
-      <span class="sk-badge badge-learning">Learning</span>
-    </div>
-    <div class="skill-row fade">
-      <span class="sk-name">Unity</span>
-      <div class="sk-bar-wrap">
-        <p class="sk-desc">Learning Unity from scratch through hands-on capstone game development.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:30%"></div></div>
-      </div>
-      <span class="sk-badge badge-learning">Learning</span>
-    </div>
-    <div class="skill-row fade">
-      <span class="sk-name">Java</span>
-      <div class="sk-bar-wrap">
-        <p class="sk-desc">OOP concepts, basic data structures, and console programs from college.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:38%"></div></div>
-      </div>
-      <span class="sk-badge badge-learning">Learning</span>
-    </div>
-    <div class="skill-row fade">
-      <span class="sk-name">JavaScript</span>
-      <div class="sk-bar-wrap">
-        <p class="sk-desc">Currently exploring JS to add interactivity to web projects.</p>
-        <div class="sk-bar"><div class="sk-fill" style="width:25%"></div></div>
-      </div>
-      <span class="sk-badge badge-learning">Learning</span>
+      <span class="sk-badge badge-basic">Basic Level</span>
     </div>
   </div>
 </section>
- 
+
 <!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="sec-top">
     <span class="sec-num">02</span>
-    <span class="sec-title">PROJECTS</span>
+    <span class="sec-title">KEY PROJECTS</span>
     <div class="sec-line"></div>
   </div>
   <div class="proj-wrap">
@@ -309,71 +296,140 @@ footer span{font-family:var(--fm);font-size:10px;color:var(--border2);letter-spa
       <div>
         <div class="proj-num">PROJECT 01</div>
         <div class="proj-title">ENGKWENTO</div>
-        <p class="proj-desc">A story-driven game built with Unity and C# for our capstone. Draws from Filipino folklore — players navigate narrative choices and encounter characters rooted in local culture. Built as a beginner in Unity, learning the engine while shipping a real game.</p>
+        <p class="proj-desc">A narrative-driven, 2D Filipino folklore RPG developed in Unity and C# as an academic capstone project. Features folklore-inspired narrative progression, custom pixel art, and dialogue mechanics.</p>
         <div class="proj-tags">
           <span class="proj-tag">Unity</span>
-          <span class="proj-tag">C#</span>
-          <span class="proj-tag">Game Dev</span>
-          <span class="proj-tag">Capstone</span>
-          <span class="proj-tag">Filipino Culture</span>
+          <span class="proj-tag">C# (Basic)</span>
+          <span class="proj-tag">Game Development</span>
+          <span class="proj-tag">2D Pixel Art</span>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/shanntidope" target="_blank" class="proj-link">GitHub →</a>
+          <a href="https://github.com/shanntidope" target="_blank" class="proj-link">GitHub Repository →</a>
         </div>
       </div>
-      <span class="status-wip">IN PROGRESS</span>
+      <span class="status-wip">CAPSTONE</span>
     </div>
     <div class="proj-card fade">
       <div>
         <div class="proj-num">PROJECT 02</div>
-        <div class="proj-title">PORTFOLIO WEBSITE</div>
-        <p class="proj-desc">This portfolio — built with plain HTML and CSS to practice front-end skills and put my work online. Hosted on GitHub Pages.</p>
+        <div class="proj-title">PERSONAL PORTFOLIO SITE</div>
+        <p class="proj-desc">A modern, dark-themed responsive website designed using HTML, CSS, and JavaScript to showcase academic achievements, organizational affiliations, and technical media skills.</p>
         <div class="proj-tags">
           <span class="proj-tag">HTML</span>
           <span class="proj-tag">CSS</span>
+          <span class="proj-tag">JavaScript</span>
           <span class="proj-tag">GitHub Pages</span>
         </div>
         <div class="proj-links">
           <a href="https://shanntidope.github.io/Portfolio" target="_blank" class="proj-link">Live Site →</a>
-          <a href="https://github.com/shanntidope" target="_blank" class="proj-link">GitHub →</a>
         </div>
       </div>
-      <span class="status-live">LIVE</span>
+      <span class="status-live">LIVE SITE</span>
     </div>
   </div>
 </section>
- 
+
 <!-- EDUCATION -->
 <section id="education" class="section">
   <div class="sec-top">
     <span class="sec-num">03</span>
-    <span class="sec-title">EDUCATION</span>
+    <span class="sec-title">EDUCATION & TRAINING</span>
     <div class="sec-line"></div>
   </div>
-  <div class="edu-wrap">
-    <div class="edu-card fade">
-      <div class="edu-year">2023 —<br>Present</div>
-      <div>
-        <div class="edu-degree">Bachelor of Science in Information Technology</div>
-        <div class="edu-school">College — BSIT</div>
-        <p class="edu-note">Studying core IT subjects including programming, networking, systems analysis, and software development. Currently in 3rd year, working on capstone project Engkwento.</p>
-      </div>
+  <div class="grid-2col">
+    <div class="grid-card fade">
+      <div class="card-date">2023 — 2027</div>
+      <div class="card-title">STI College Tanay</div>
+      <div class="card-sub">Bachelor of Science in Information Technology</div>
+      <p class="card-desc">Focused on software engineering, web technologies, database administration, and interactive digital systems.</p>
     </div>
-    <div class="edu-card fade">
-      <div class="edu-year">2020 —<br>2023</div>
-      <div>
-        <div class="edu-degree">Senior High School — STEM</div>
-        <div class="edu-school">Science, Technology, Engineering & Mathematics</div>
-        <p class="edu-note">Completed the STEM strand which introduced foundational concepts in science and technology, and sparked an interest in programming and IT.</p>
-      </div>
+    <div class="grid-card fade">
+      <div class="card-date">2017 — 2023</div>
+      <div class="card-title">St. Joseph Parish School</div>
+      <div class="card-sub">Junior & Senior High School</div>
+      <p class="card-desc">Active participant in campus arts, choir, dance troupe, and student media activities.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2011 — 2017</div>
+      <div class="card-title">Baras Elementary School</div>
+      <div class="card-sub">Primary Education</div>
+      <p class="card-desc">Completed primary education with early involvement in community and youth sports programs.</p>
+    </div>
+  </div>
+
+  <div class="workshop-card fade">
+    <div class="workshop-tag">NCCA WORKSHOP</div>
+    <div>
+      <div class="card-title">Choir Workshop and Lectures Focusing on Lucio San Pedro</div>
+      <div class="card-sub">Loyola Retreat House, Angono, Rizal · March 16, 2024</div>
+      <p class="card-desc">Participated in formal lectures and masterclasses as part of the National Commission for Culture and the Arts (NCCA) program for National Arts Month.</p>
     </div>
   </div>
 </section>
- 
+
+<!-- AFFILIATIONS -->
+<section id="affiliations" class="section">
+  <div class="sec-top">
+    <span class="sec-num">04</span>
+    <span class="sec-title">ORGANIZATIONAL AFFILIATIONS</span>
+    <div class="sec-line"></div>
+  </div>
+  <div class="grid-2col">
+    <div class="grid-card fade">
+      <div class="card-date">2023 — Current</div>
+      <div class="card-title">San Jose De Baras Choir</div>
+      <div class="card-sub">Social Media Head & Head Section Bass</div>
+      <p class="card-desc">Leads digital media branding, social media posts, and section leadership for the bass section.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2024 — Current</div>
+      <div class="card-title">SOCOM</div>
+      <div class="card-sub">Technical & Broadcasting Member</div>
+      <p class="card-desc">Manages technical equipment, live streaming setup, and media broadcasting operations.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2018 — 2024</div>
+      <div class="card-title">Parish Youth Ministry</div>
+      <div class="card-sub">Member (Animator - 2020)</div>
+      <p class="card-desc">Organized youth activities, community engagement programs, and event animation leadership.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2019 — 2023</div>
+      <div class="card-title">Baras Theatre Arts Group</div>
+      <div class="card-sub">Dance Troupe Member & Visual Artist</div>
+      <p class="card-desc">Performed in community stage events and contributed to visual art production.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2019 — 2023</div>
+      <div class="card-title">St. Joseph School Choir</div>
+      <div class="card-sub">Bass Vocalist</div>
+      <p class="card-desc">Performed as part of the school choir section across academic and liturgical celebrations.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2018 — 2023</div>
+      <div class="card-title">St. Joseph Dance Troupe</div>
+      <div class="card-sub">Member</div>
+      <p class="card-desc">Participated in school cultural festivals, competitions, and dance performances.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2018 — 2019</div>
+      <div class="card-title">Knights of the Altar</div>
+      <div class="card-sub">Member</div>
+      <p class="card-desc">Served in liturgical operations and community parish gatherings.</p>
+    </div>
+    <div class="grid-card fade">
+      <div class="card-date">2018 — 2019</div>
+      <div class="card-title">BaraSmashers</div>
+      <div class="card-sub">Member</div>
+      <p class="card-desc">Active participant in community sports activities.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="sec-top">
-    <span class="sec-num">04</span>
+    <span class="sec-num">05</span>
     <span class="sec-title">CONTACT</span>
     <div class="sec-line"></div>
   </div>
@@ -381,45 +437,45 @@ footer span{font-family:var(--fm);font-size:10px;color:var(--border2);letter-spa
   <div class="contact-sub-head">CONNECT.</div>
   <div class="contact-grid">
     <a href="mailto:shanncawicaan16@gmail.com" class="contact-item">
-      <span class="contact-type">Email</span>
+      <span class="contact-type">Direct Email</span>
       <span class="contact-val">shanncawicaan16@gmail.com</span>
-      <span class="contact-note">Best way to reach me</span>
+      <span class="contact-note">Primary channel for inquiries</span>
     </a>
     <a href="https://github.com/shanntidope" target="_blank" class="contact-item">
-      <span class="contact-type">GitHub</span>
+      <span class="contact-type">GitHub Profile</span>
       <span class="contact-val">github.com/shanntidope</span>
-      <span class="contact-note">My code & projects</span>
+      <span class="contact-note">Repositories & code</span>
     </a>
   </div>
   <div class="form-wrap">
-    <div class="form-notice">⚠ Fill out the form and I'll get back to you via email.</div>
+    <div class="form-notice">✉ Direct messages or collaboration requests:</div>
     <div class="form-inner">
       <div class="form-row">
         <div class="form-group">
           <label>Your Name</label>
-          <input type="text" name="name" placeholder="Juan Dela Cruz" required>
+          <input type="text" name="name" placeholder="Name / Organization" required>
         </div>
         <div class="form-group">
           <label>Your Email</label>
-          <input type="email" name="email" placeholder="juan@email.com" required>
-          <span class="email-hint">⚠ USE YOUR REAL EMAIL SO I CAN REPLY BACK.</span>
+          <input type="email" name="email" placeholder="email@domain.com" required>
+          <span class="email-hint"> Please enter a valid email address for replies.</span>
         </div>
       </div>
       <div class="form-group">
         <label>Message</label>
-        <textarea name="message" placeholder="What would you like to say?" required></textarea>
+        <textarea name="message" placeholder="Write your message here..." required></textarea>
       </div>
       <button class="btn-main" id="send-btn" onclick="sendMsg(event)">Send Message</button>
       <p id="form-status"></p>
     </div>
   </div>
 </section>
- 
+
 <footer>
-  <p>SHANN CAWICAAN — 2025</p>
-  <span>BSIT · 3RD YEAR</span>
+  <p>SHANN CAWICAAN — 2026</p>
+  <span>STI COLLEGE TANAY · BSIT</span>
 </footer>
- 
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
 emailjs.init("eccubDopWVdZUrLY5");
@@ -437,19 +493,19 @@ function sendMsg(e){
   const name=document.querySelector('[name="name"]').value;
   const email=document.querySelector('[name="email"]').value;
   const message=document.querySelector('[name="message"]').value;
-  if(!name||!email||!message){status.textContent='Please fill in all fields.';status.className='error';return;}
+  if(!name||!email||!message){status.textContent='Please fill in all required fields.';status.className='error';return;}
   btn.textContent='SENDING...';btn.disabled=true;
   status.className='';status.textContent='';
   emailjs.send('service_zgn6bbs','template_wcfqmto',{name,email,message})
     .then(()=>{
-      status.textContent='Message sent! I will get back to you soon.';
+      status.textContent='Message sent successfully!';
       status.className='success';
       btn.textContent='Send Message';btn.disabled=false;
       document.querySelector('[name="name"]').value='';
       document.querySelector('[name="email"]').value='';
       document.querySelector('[name="message"]').value='';
     },(err)=>{
-      status.textContent='Something went wrong. Please email me directly.';
+      status.textContent='Something went wrong. Please email directly at shanncawicaan16@gmail.com.';
       status.className='error';
       btn.textContent='Send Message';btn.disabled=false;
     });
